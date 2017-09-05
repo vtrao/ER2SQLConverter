@@ -1,0 +1,59 @@
+ 
+vaavs[
+	database company ; 
+	struct employee entitytype{
+				ssn integer pkey ;
+				bdate integer ;
+				name varchar 10;
+				salary integer ;
+				sex integer ;
+				}
+	struct department entitytype{
+				name varchar 5 ;
+				dnumber number 4 3 pkey;
+				locations varchar 5 mulv;
+				}
+	struct project entitytype{
+				name varchar 5 ;	
+				pnumbe  varchar 6 pkey;
+				location varchar 5 ;
+				}
+	struct dependant weakentitytype{
+				name varchar 5 partialkey;
+				sex number 6 3;
+				birthdate integer ;
+				}
+	struct manages relationtype{
+				startdate integer;
+				}
+	struct works_on relationtype{
+				hours number 7 3;
+				}
+	relation supervision {
+				employee 1;
+				employee 5;
+				}
+	relation works_for{
+			employee 1;
+			department 6;
+				}
+	relation manages{
+			employee 1;
+			department 1;
+			}
+	relation controls{
+			department 3;
+			project 1;
+			}
+	relation works_on{
+			employee 3;
+			project 4;
+			}
+	relation dependents_of identify{
+			employee 1;
+			dependant 3;
+				}
+			
+
+
+	]

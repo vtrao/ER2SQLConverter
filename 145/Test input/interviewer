@@ -1,0 +1,33 @@
+vaavs
+[
+database interviewer; 
+struct candidate entitytype
+	{
+	name varchar 6 pkey;
+	}
+struct company entitytype
+	{
+	cname varchar 6 pkey;
+	}
+struct joboffer entitytype
+	{
+	results integer pkey;
+	}
+struct interview weakentitytype
+	{
+	dept integer partialkey;
+	dat  integer partialkey;
+	}
+relation cci identify
+	{
+	candidate 1;
+	company   2;
+	interview 1;
+	}
+relation resultsin
+	{
+	interview 1;
+	joboffer  1;
+	}
+
+]

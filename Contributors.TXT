@@ -1,0 +1,31 @@
+venkatnaidu@users.sourceforge.net 
+
+
+   	  PROJECTS  DONE AT International Institute of Information Technology Bangalore
+
+
+7 ########DATA ENGINEERING PROJECT:						
+
+		Title: ER 2 SQL CONVERTOR			Status: COMPLETED-GRAND SUCCESS
+
+		Platform: Linux(SUSE)				Programming Language:  LEX+YACC,C
+
+	Roll Number		Name				 Email-ID:
+	2005145          Venkata Thippanna Rao P  R              venkata.thippannarao@iiitb.ac.in
+	
+	2005117          Shashank Handa                          shashan.handa@iiitb.ac.in
+
+	2005004          Abhinav Mehrotra                        abhinav.mehrotra@iiitb.ac.in  
+
+	2005002		 Abhijeeth Rao				 abhijeeth.rao@iiitb.ac.in
+ 
+
+
+
+
+
+
+
+
+
+ 

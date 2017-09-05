@@ -1,0 +1,107 @@
+ 
+vaavs[
+	database airplane;
+	struct airport entitytype{
+				airport_code number 6 3 pkey;
+				name varchar 10;
+				city varchar 13;
+				state varchar 12;
+				}
+	
+	struct flightleg weakentitytype{
+				legno integer partialkey;
+					}
+	struct airplanet entitytype{
+				tname varchar 10 pkey;
+				max_seats integer ;
+				company varchar 6;
+				}
+	struct flight entitytype{
+				numbe integer pkey;
+				weekdays varchar 4 ;
+				airline varchar 5;
+				}
+	struct fare weakentitytype{
+				code integer partialkey;
+				amount number 6 3;
+				restrictions varchar 3;
+				}
+	struct airplane entitytype{
+				airplaneid integer pkey;
+				totalseats integer ;
+				}
+	struct leg_instance weakentitytype{
+				dat integer partialkey;
+				avail_seats integer ; 
+					}
+	struct seat weakentitytype{
+				seatno integer partialkey;
+				}
+//	struct can_land relationtype
+//				{
+//				canlandd integer;
+//				}
+ 
+	struct dep_port relationtype{
+				dep_tim integer ;
+					} 
+	struct ari_port relationtype{
+				ari_tim integer;
+					}
+	struct departs relationtype{
+				deptim integer;
+				}
+	struct arrives relationtype{
+				aritim integer;
+				}
+	struct reservation relationtype{
+				customername varchar 12;
+				cphone varchar 10;
+					}
+	relation dep_port{
+			airport 1;
+			flightleg 3;
+			}
+	relation ari_port{
+			airport 1;
+			flightleg 3;
+	}
+			
+	relation can_land{
+			airport 3;
+			airplanet 4;
+			}
+	relation typ{
+			airplanet 1; 
+			airplane 4;
+			}
+	relation departs{
+			airport 1;
+			leg_instance 4;
+			}
+	relation arrives{
+			airport 1;
+			leg_instance 5;
+			}
+	relation assigned{
+			airplane 1;
+			leg_instance 5;
+			}
+       relation legs identify{
+                        flight 1;
+                        flightleg 3;
+                        }
+	relation fares identify{
+                        flight 1;
+                        fare 3;
+                        }
+	relation instance_of identify {
+			flightleg 1;
+			leg_instance 3;
+			}
+	relation reservation identify{
+			leg_instance 1;
+			seat 3;
+				}
+	
+]

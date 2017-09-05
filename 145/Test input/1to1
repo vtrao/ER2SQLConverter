@@ -1,0 +1,54 @@
+vaavs
+[
+database venki;
+struct instructor entitytype
+	{
+	name integer pkey;
+	sdds varchar 30 ;
+	}
+struct course entitytype
+	{
+	cname integer pkey;
+	dum varchar 40;
+	}
+struct semester entitytype
+	{
+	sem integer pkey;
+	year integer pkey;
+	dump varchar 30;
+	}
+struct canteach relationtype
+	{
+	cx integer;
+	}
+struct taughtduring relationtype
+	{
+	even integer;
+	}
+struct offerduring relationtype
+	{
+	of integer;
+	}
+relation canteach
+	{
+	instructor 1 totpart;
+	course 1 totpart;
+	}
+relation taughtduring
+	{
+	instructor 1;
+	semester 1 totpart;
+	}
+relation offerduring
+	{
+	semester 1;
+	course 1;
+	}
+relation offers
+        {
+        instructor 2;
+        semester 3;
+        course 4;
+        }
+
+]

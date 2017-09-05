@@ -1,0 +1,52 @@
+vaavs[
+	database bank;
+	struct bank entitytype{
+				code integer pkey ;
+				name varchar 6 ;
+				adr varchar 6 ;
+				abhinav integer mulv;
+				}
+	struct bank_branch weakentitytype{
+				branchno integer partialkey ;
+				addr varchar 6 ;
+				//venki integer mulv;
+				}
+	struct account entitytype{
+				acctno integer pkey ;
+				balance integer ;
+				type varchar 6 ;
+				}
+	struct customer entitytype{
+				ssn integer pkey;
+				phone integer ;
+				name varchar 10;	
+				addr varchar 10;
+				}
+	struct loan entitytype{
+				loanno integer pkey;
+				amount number 4 3;
+				type varchar 6;
+				}
+
+	relation branches identify {
+			bank 1;
+			bank_branch 3;
+				}
+
+	relation accts{
+			bank_branch 1;
+			account 3;
+			}
+	relation a_c{
+			account 3;		
+			customer 4;
+		}
+	relation loans{
+			bank_branch 1;
+			loan 3;
+			}
+	relation l_c{
+			loan 3;
+			customer 4;
+		}		
+]
